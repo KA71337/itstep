@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>С Днём учителя! ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100svh;
+            overflow: hidden;
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background:
+                radial-gradient(circle at 50% 20%, rgba(255, 70, 100, 0.18), transparent 32%),
+                radial-gradient(circle at 20% 80%, rgba(130, 70, 255, 0.18), transparent 35%),
+                linear-gradient(145deg, #09090f, #120b16 55%, #08080d);
+
+            color: #fff;
+        }
+
+        /* ===== BACKGROUND ===== */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .glow {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: .22;
+        }
+
+        .glow.one {
+            background: #ff1744;
+            top: -180px;
+            left: -150px;
+        }
+
+        .glow.two {
+            background: #7c3aed;
+            right: -180px;
+            bottom: -180px;
+        }
+
+        /* ===== MAIN ===== */
+
+        .page {
+            position: relative;
+            z-index: 2;
+
+            width: 100%;
+            min-height: 100vh;
+            min-height: 100svh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 24px;
+        }
+
+        .card {
+            width: min(720px, 100%);
+
+            padding: clamp(32px, 7vw, 64px) clamp(22px, 6vw, 55px);
+
+            text-align: center;
+
+            border: 1px solid rgba(255, 255, 255, .10);
+            border-radius: 30px;
+
+            background: rgba(255, 255, 255, .055);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+
+            box-shadow:
+                0 30px 100px rgba(0, 0, 0, .45),
+                inset 0 1px 0 rgba(255, 255, 255, .08);
+
+            animation: cardIn .9s cubic-bezier(.2,.8,.2,1);
+        }
+
+        @keyframes cardIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px) scale(.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .heart {
+            width: 76px;
+            height: 76px;
+
+            margin: 0 auto 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 24px;
+
+            font-size: 38px;
+
+            background: linear-gradient(
+                145deg,
+                rgba(255, 45, 85, .25),
+                rgba(255, 45, 85, .08)
+            );
+
+            border: 1px solid rgba(255, 90, 120, .25);
+
+            box-shadow:
+                0 15px 45px rgba(255, 30, 70, .18);
+        }
+
+        h1 {
+            font-size: clamp(32px, 6vw, 58px);
+            line-height: 1.05;
+            letter-spacing: -1.8px;
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+            background: linear-gradient(
+                135deg,
+                #ffffff 20%,
+                #ffd7df 55%,
+                #ff5877 100%
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            font-size: clamp(17px, 3vw, 23px);
+            line-height: 1.55;
+
+            color: rgba(255,255,255,.70);
+
+            margin-bottom: 32px;
+        }
+
+        .names {
+            display: inline-block;
+
+            font-size: clamp(20px, 4vw, 28px);
+            font-weight: 700;
+
+            color: #fff;
+
+            padding: 12px 20px;
+
+            border-radius: 15px;
+
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.08);
+        }
+
+        /* ===== QUESTION ===== */
+
+        .question {
+            margin-top: 35px;
+        }
+
+        .question-title {
+            font-size: clamp(22px, 4vw, 31px);
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            color: rgba(255,255,255,.62);
+            font-size: 16px;
+
+            margin-bottom: 28px;
+        }
+
+        /* ===== BUTTON ===== */
+
+        .start-button {
+            position: relative;
+
+            width: min(420px, 100%);
+            min-height: 68px;
+
+            border: none;
+            border-radius: 19px;
+
+            cursor: pointer;
+
+            color: white;
+
+            font-size: clamp(17px, 3vw, 21px);
+            font-weight: 800;
+
+            letter-spacing: .2px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff1744,
+                    #e60032
+                );
+
+            box-shadow:
+                0 14px 35px rgba(255, 23, 68, .32),
+                inset 0 1px 0 rgba(255,255,255,.2);
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .start-button:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 20px 45px rgba(255, 23, 68, .42),
+                inset 0 1px 0 rgba(255,255,255,.2);
+        }
+
+        .start-button:active {
+            transform: scale(.97);
+        }
+
+        .button-shine {
+            position: absolute;
+            inset: 0;
+
+            border-radius: inherit;
+
+            background: linear-gradient(
+                110deg,
+                transparent 30%,
+                rgba(255,255,255,.22),
+                transparent 70%
+            );
+
+            transform: translateX(-100%);
+            animation: shine 3.2s infinite;
+        }
+
+        @keyframes shine {
+            0%,
+            55% {
+                transform: translateX(-100%);
+            }
+
+            75%,
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .button-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hint {
+            margin-top: 18px;
+
+            font-size: 13px;
+            color: rgba(255,255,255,.42);
+        }
+
+        /* ===== VIDEO ===== */
+
+        #videoScreen {
+            position: fixed;
+            inset: 0;
+
+            width: 100vw;
+            height: 100vh;
+            height: 100svh;
+
+            z-index: 100;
+
+            background: #000;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #videoScreen.active {
+            display: flex;
+            animation: videoIn .7s ease;
+        }
+
+        @keyframes videoIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #mainVideo {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            display: block;
+
+            background: #000;
+
+            border: 0;
+            outline: 0;
+        }
+
+        /* ===== CONFETTI ===== */
+
+        .confetti {
+            position: fixed;
+            width: 8px;
+            height: 14px;
+
+            top: -20px;
+
+            z-index: 50;
+
+            pointer-events: none;
+
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            from {
+                transform:
+                    translateY(-30px)
+                    rotate(0deg);
+            }
+
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+            }
+        }
+
+        /* ===== MOBILE ===== */
+
+        @media (max-width: 600px) {
+
+            .page {
+                padding: 15px;
+            }
+
+            .card {
+                border-radius: 25px;
+                padding: 38px 20px;
+            }
+
+            .heart {
+                width: 65px;
+                height: 65px;
+                font-size: 32px;
+                border-radius: 20px;
+                margin-bottom: 21px;
+            }
+
+            h1 {
+                letter-spacing: -1px;
+            }
+
+            .subtitle {
+                margin-bottom: 24px;
+            }
+
+            .question {
+                margin-top: 27px;
+            }
+
+            .start-button {
+                min-height: 64px;
+                border-radius: 17px;
+            }
+        }
+
+        @media (max-height: 650px) {
+
+            .card {
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+
+            .heart {
+                margin-bottom: 15px;
+            }
+
+            .question {
+                margin-top: 20px;
+            }
+
+            .question-text {
+                margin-bottom: 18px;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background">
+        <div class="glow one"></div>
+        <div class="glow two"></div>
+    </div>
+
+
+    <!-- Main page -->
+    <main class="page" id="mainPage">
+
+        <section class="card">
+
+            <div class="heart">
+                ❤️
+            </div>
+
+            <h1>
+                С Днём учителя!
+            </h1>
+
+            <p class="subtitle">
+                Дорогой Сянан Меллим,<br>
+                поздравляем Вас с этим прекрасным днём!
+            </p>
+
+            <div class="names">
+                От Кямила и Рауля ❤️
+            </div>
+
+            <div class="question">
+
+                <div class="question-title">
+                    А дадите нам 50 кристаллов? 🥺
+                </div>
+
+                <div class="question-text">
+                    Ну пожалуйста... мы очень старались! 😭
+                </div>
+
+                <button class="start-button" id="startButton">
+                    <span class="button-content">
+                        ДАЮ 50 КРИСТАЛЛОВ ❤️
+                    </span>
+
+                    <span class="button-shine"></span>
+                </button>
+
+                <div class="hint">
+                    ↓ нажмите на кнопку ↓
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Video screen -->
+    <div id="videoScreen">
+
+        <video
+            id="mainVideo"
+            src="video.mp4"
+            playsinline
+            preload="auto"
+        ></video>
+
+    </div>
+
+
+    <!-- Audio -->
+    <audio
+        id="voice"
+        src="ozvuchka.mp3"
+        preload="auto">
+    </audio>
+
+
+    <script>
+
+        const button = document.getElementById("startButton");
+        const voice = document.getElementById("voice");
+        const mainPage = document.getElementById("mainPage");
+        const videoScreen = document.getElementById("videoScreen");
+        const video = document.getElementById("mainVideo");
+
+
+        let started = false;
+
+
+        // ============================
+        // BUTTON
+        // ============================
+
+        button.addEventListener("click", async () => {
+
+            if (started) return;
+
+            started = true;
+
+            button.disabled = true;
+
+            button.querySelector(".button-content").textContent =
+                "❤️ Сейчас будет...";
+
+
+            // Конфетти
+            createConfetti();
+
+
+            try {
+
+                // Запускаем озвучку
+                voice.currentTime = 0;
+
+                await voice.play();
+
+            } catch (error) {
+
+                console.log("Audio playback error:", error);
+
+                // Если браузер не смог запустить аудио,
+                // всё равно переходим к видео.
+                showVideo();
+
+            }
+
+        });
+
+
+        // ============================
+        // AUDIO FINISHED
+        // ============================
+
+        voice.addEventListener("ended", () => {
+
+            showVideo();
+
+        });
+
+
+        // ============================
+        // SHOW VIDEO
+        // ============================
+
+        async function showVideo() {
+
+            // Скрываем первую страницу
+            mainPage.style.display = "none";
+
+            // Показываем видео
+            videoScreen.classList.add("active");
+
+            // Перематываем в начало
+            video.currentTime = 0;
+
+            try {
+
+                // Пытаемся запустить видео со звуком
+                await video.play();
+
+            } catch (error) {
+
+                console.log(
+                    "Autoplay with sound was blocked. Trying muted playback."
+                );
+
+                // Некоторые браузеры могут запретить
+                // автоматическое видео со звуком.
+                video.muted = true;
+
+                try {
+                    await video.play();
+                } catch (e) {
+                    console.log("Video autoplay blocked:", e);
+                }
+
+            }
+
+        }
+
+
+        // ============================
+        // CONFETTI
+        // ============================
+
+        function createConfetti() {
+
+            const amount = 80;
+
+            for (let i = 0; i < amount; i++) {
+
+                const piece = document.createElement("div");
+
+                piece.className = "confetti";
+
+                piece.style.left =
+                    Math.random() * 100 + "vw";
+
+                piece.style.animationDuration =
+                    (2 + Math.random() * 3) + "s";
+
+                piece.style.animationDelay =
+                    Math.random() * .7 + "s";
+
+                piece.style.transform =
+                    `rotate(${Math.random() * 360}deg)`;
+
+                const colors = [
+                    "#ff1744",
+                    "#ff4569",
+                    "#ffffff",
+                    "#ffd166",
+                    "#7c3aed"
+                ];
+
+                piece.style.background =
+                    colors[Math.floor(Math.random() * colors.length)];
+
+                document.body.appendChild(piece);
+
+                setTimeout(() => {
+                    piece.remove();
+                }, 5500);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
