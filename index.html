@@ -1,504 +1,773 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-    <title>С Днём учителя! ❤️</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html,
-        body {
-            width: 100%;
-            min-height: 100%;
-        }
-
-        body {
-            min-height: 100vh;
-            min-height: 100svh;
-            overflow: hidden;
-            font-family:
-                Inter,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Arial,
-                sans-serif;
-
-            background:
-                radial-gradient(circle at 50% 20%, rgba(255, 70, 100, 0.18), transparent 32%),
-                radial-gradient(circle at 20% 80%, rgba(130, 70, 255, 0.18), transparent 35%),
-                linear-gradient(145deg, #09090f, #120b16 55%, #08080d);
-
-            color: #fff;
-        }
-
-        /* ===== BACKGROUND ===== */
-
-        .background {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 0;
-        }
-
-        .glow {
-            position: absolute;
-            width: 420px;
-            height: 420px;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: .22;
-        }
-
-        .glow.one {
-            background: #ff1744;
-            top: -180px;
-            left: -150px;
-        }
-
-        .glow.two {
-            background: #7c3aed;
-            right: -180px;
-            bottom: -180px;
-        }
-
-        /* ===== MAIN ===== */
-
-        .page {
-            position: relative;
-            z-index: 2;
-
-            width: 100%;
-            min-height: 100vh;
-            min-height: 100svh;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 24px;
-        }
-
-        .card {
-            width: min(720px, 100%);
-
-            padding: clamp(32px, 7vw, 64px) clamp(22px, 6vw, 55px);
-
-            text-align: center;
-
-            border: 1px solid rgba(255, 255, 255, .10);
-            border-radius: 30px;
-
-            background: rgba(255, 255, 255, .055);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-
-            box-shadow:
-                0 30px 100px rgba(0, 0, 0, .45),
-                inset 0 1px 0 rgba(255, 255, 255, .08);
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>С Днём учителя! ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 30, 70, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(110, 60, 255, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #09090f,
+            #130b18,
+            #08080d
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: .20;
+}
+
+.glow.one {
+    background: #ff1744;
+    top: -220px;
+    left: -180px;
+}
+
+.glow.two {
+    background: #713cff;
+    right: -200px;
+    bottom: -200px;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
 
-            animation: cardIn .9s cubic-bezier(.2,.8,.2,1);
-        }
+.page {
+    position: relative;
+    z-index: 2;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        @keyframes cardIn {
-            from {
-                opacity: 0;
-                transform: translateY(25px) scale(.97);
-            }
+    padding: 30px 18px;
+}
 
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+.card {
+    width: min(760px, 100%);
 
-        .heart {
-            width: 76px;
-            height: 76px;
+    padding:
+        clamp(35px, 7vw, 65px)
+        clamp(22px, 6vw, 60px);
 
-            margin: 0 auto 25px;
+    text-align: center;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    border-radius: 32px;
 
-            border-radius: 24px;
+    background: rgba(255,255,255,.055);
 
-            font-size: 38px;
+    border: 1px solid rgba(255,255,255,.10);
 
-            background: linear-gradient(
-                145deg,
-                rgba(255, 45, 85, .25),
-                rgba(255, 45, 85, .08)
-            );
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
 
-            border: 1px solid rgba(255, 90, 120, .25);
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.45),
+        inset 0 1px 0 rgba(255,255,255,.08);
 
-            box-shadow:
-                0 15px 45px rgba(255, 30, 70, .18);
-        }
+    animation: cardAppear .8s ease;
+}
 
-        h1 {
-            font-size: clamp(32px, 6vw, 58px);
-            line-height: 1.05;
-            letter-spacing: -1.8px;
-            font-weight: 800;
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(.97);
+    }
 
-            margin-bottom: 18px;
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
-            background: linear-gradient(
-                135deg,
-                #ffffff 20%,
-                #ffd7df 55%,
-                #ff5877 100%
-            );
 
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+/* =========================================
+   HEART
+========================================= */
 
-        .subtitle {
-            font-size: clamp(17px, 3vw, 23px);
-            line-height: 1.55;
+.heart {
+    width: 78px;
+    height: 78px;
 
-            color: rgba(255,255,255,.70);
+    margin: 0 auto 25px;
 
-            margin-bottom: 32px;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        .names {
-            display: inline-block;
+    font-size: 38px;
 
-            font-size: clamp(20px, 4vw, 28px);
-            font-weight: 700;
+    border-radius: 24px;
 
-            color: #fff;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,30,70,.24),
+            rgba(255,30,70,.07)
+        );
 
-            padding: 12px 20px;
+    border: 1px solid rgba(255,90,120,.25);
 
-            border-radius: 15px;
+    box-shadow:
+        0 15px 50px rgba(255,20,70,.18);
+}
 
-            background: rgba(255,255,255,.06);
-            border: 1px solid rgba(255,255,255,.08);
-        }
 
-        /* ===== QUESTION ===== */
+/* =========================================
+   TEXT
+========================================= */
 
-        .question {
-            margin-top: 35px;
-        }
+h1 {
+    font-size: clamp(34px, 6vw, 58px);
+    line-height: 1.05;
 
-        .question-title {
-            font-size: clamp(22px, 4vw, 31px);
-            font-weight: 800;
+    letter-spacing: -2px;
 
-            margin-bottom: 10px;
-        }
+    font-weight: 850;
 
-        .question-text {
-            color: rgba(255,255,255,.62);
-            font-size: 16px;
+    margin-bottom: 20px;
 
-            margin-bottom: 28px;
-        }
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ffdce4 50%,
+            #ff4c70
+        );
 
-        /* ===== BUTTON ===== */
+    -webkit-background-clip: text;
+    background-clip: text;
 
-        .start-button {
-            position: relative;
+    color: transparent;
+}
 
-            width: min(420px, 100%);
-            min-height: 68px;
+.subtitle {
+    color: rgba(255,255,255,.70);
 
-            border: none;
-            border-radius: 19px;
+    font-size: clamp(17px, 3vw, 22px);
 
-            cursor: pointer;
+    line-height: 1.55;
 
-            color: white;
+    margin-bottom: 25px;
+}
 
-            font-size: clamp(17px, 3vw, 21px);
-            font-weight: 800;
+.names {
+    display: inline-block;
 
-            letter-spacing: .2px;
+    padding: 12px 20px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #ff1744,
-                    #e60032
-                );
+    border-radius: 15px;
 
-            box-shadow:
-                0 14px 35px rgba(255, 23, 68, .32),
-                inset 0 1px 0 rgba(255,255,255,.2);
+    background: rgba(255,255,255,.055);
 
-            transition:
-                transform .2s ease,
-                box-shadow .2s ease;
-        }
+    border: 1px solid rgba(255,255,255,.09);
 
-        .start-button:hover {
-            transform: translateY(-3px);
+    font-size: clamp(18px, 3.5vw, 26px);
 
-            box-shadow:
-                0 20px 45px rgba(255, 23, 68, .42),
-                inset 0 1px 0 rgba(255,255,255,.2);
-        }
+    font-weight: 750;
+}
 
-        .start-button:active {
-            transform: scale(.97);
-        }
 
-        .button-shine {
-            position: absolute;
-            inset: 0;
+/* =========================================
+   QUESTION
+========================================= */
 
-            border-radius: inherit;
+.question {
+    margin-top: 38px;
+}
 
-            background: linear-gradient(
-                110deg,
-                transparent 30%,
-                rgba(255,255,255,.22),
-                transparent 70%
-            );
+.question h2 {
+    font-size: clamp(23px, 4vw, 32px);
 
-            transform: translateX(-100%);
-            animation: shine 3.2s infinite;
-        }
+    font-weight: 800;
 
-        @keyframes shine {
-            0%,
-            55% {
-                transform: translateX(-100%);
-            }
+    margin-bottom: 10px;
+}
 
-            75%,
-            100% {
-                transform: translateX(100%);
-            }
-        }
+.question p {
+    color: rgba(255,255,255,.52);
 
-        .button-content {
-            position: relative;
-            z-index: 2;
-        }
+    font-size: 16px;
 
-        .hint {
-            margin-top: 18px;
+    margin-bottom: 25px;
+}
 
-            font-size: 13px;
-            color: rgba(255,255,255,.42);
-        }
 
-        /* ===== VIDEO ===== */
+/* =========================================
+   YES / NO BUTTONS
+========================================= */
 
-        #videoScreen {
-            position: fixed;
-            inset: 0;
+.answers {
+    display: flex;
 
-            width: 100vw;
-            height: 100vh;
-            height: 100svh;
+    justify-content: center;
 
-            z-index: 100;
+    gap: 14px;
 
-            background: #000;
+    width: 100%;
+}
 
-            display: none;
-            align-items: center;
-            justify-content: center;
-        }
+.answer {
+    flex: 1;
 
-        #videoScreen.active {
-            display: flex;
-            animation: videoIn .7s ease;
-        }
+    max-width: 220px;
 
-        @keyframes videoIn {
-            from {
-                opacity: 0;
-            }
+    min-height: 62px;
 
-            to {
-                opacity: 1;
-            }
-        }
+    border: 1px solid rgba(255,255,255,.10);
 
-        #mainVideo {
-            width: 100%;
-            height: 100%;
+    border-radius: 17px;
 
-            object-fit: contain;
+    color: white;
 
-            display: block;
+    font-size: 18px;
 
-            background: #000;
+    font-weight: 800;
 
-            border: 0;
-            outline: 0;
-        }
+    cursor: pointer;
 
-        /* ===== CONFETTI ===== */
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
 
-        .confetti {
-            position: fixed;
-            width: 8px;
-            height: 14px;
+.answer:hover {
+    transform: translateY(-3px);
+}
 
-            top: -20px;
+.answer.yes {
+    background:
+        linear-gradient(
+            135deg,
+            #ff1744,
+            #e00035
+        );
 
-            z-index: 50;
+    box-shadow:
+        0 12px 30px rgba(255,20,65,.25);
+}
 
-            pointer-events: none;
+.answer.no {
+    background: rgba(255,255,255,.07);
+}
 
-            animation: fall linear forwards;
-        }
+.answer.no:hover {
+    background: rgba(255,255,255,.11);
+}
 
-        @keyframes fall {
-            from {
-                transform:
-                    translateY(-30px)
-                    rotate(0deg);
-            }
 
-            to {
-                transform:
-                    translateY(110vh)
-                    rotate(720deg);
-            }
-        }
+/* =========================================
+   AFTER ANSWER
+========================================= */
 
-        /* ===== MOBILE ===== */
+.after-answer {
+    display: none;
 
-        @media (max-width: 600px) {
+    margin-top: 30px;
 
-            .page {
-                padding: 15px;
-            }
+    animation: answerAppear .6s ease;
+}
 
-            .card {
-                border-radius: 25px;
-                padding: 38px 20px;
-            }
+.after-answer.show {
+    display: block;
+}
 
-            .heart {
-                width: 65px;
-                height: 65px;
-                font-size: 32px;
-                border-radius: 20px;
-                margin-bottom: 21px;
-            }
+@keyframes answerAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
 
-            h1 {
-                letter-spacing: -1px;
-            }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-            .subtitle {
-                margin-bottom: 24px;
-            }
+.after-title {
+    font-size: 19px;
 
-            .question {
-                margin-top: 27px;
-            }
+    color: rgba(255,255,255,.75);
 
-            .start-button {
-                min-height: 64px;
-                border-radius: 17px;
-            }
-        }
+    margin-bottom: 17px;
+}
 
-        @media (max-height: 650px) {
 
-            .card {
-                padding-top: 25px;
-                padding-bottom: 25px;
-            }
+/* =========================================
+   RED BUTTON
+========================================= */
 
-            .heart {
-                margin-bottom: 15px;
-            }
+.start-button {
+    position: relative;
 
-            .question {
-                margin-top: 20px;
-            }
+    width: min(440px, 100%);
 
-            .question-text {
-                margin-bottom: 18px;
-            }
-        }
+    min-height: 70px;
 
-        /* Accessibility */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: .01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: .01ms !important;
-            }
-        }
-    </style>
+    border: none;
+
+    border-radius: 19px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    color: white;
+
+    font-size: clamp(17px, 3vw, 21px);
+
+    font-weight: 850;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1744,
+            #d90032
+        );
+
+    box-shadow:
+        0 18px 45px rgba(255,20,65,.34),
+        inset 0 1px 0 rgba(255,255,255,.20);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.start-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 24px 55px rgba(255,20,65,.44),
+        inset 0 1px 0 rgba(255,255,255,.20);
+}
+
+.start-button:active {
+    transform: scale(.97);
+}
+
+.button-content {
+    position: relative;
+    z-index: 2;
+}
+
+.button-shine {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent 30%,
+            rgba(255,255,255,.22),
+            transparent 70%
+        );
+
+    transform: translateX(-100%);
+
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+
+    0%,
+    55% {
+        transform: translateX(-100%);
+    }
+
+    75%,
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.hint {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: rgba(255,255,255,.38);
+}
+
+
+/* =========================================
+   VIDEO CONTAINER
+========================================= */
+
+.video-section {
+    position: relative;
+    z-index: 5;
+
+    display: none;
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    padding:
+        clamp(20px, 4vw, 50px)
+        clamp(15px, 5vw, 60px);
+
+    align-items: center;
+    justify-content: center;
+}
+
+.video-section.show {
+    display: flex;
+
+    animation: videoAppear .8s ease;
+}
+
+@keyframes videoAppear {
+    from {
+        opacity: 0;
+        transform: scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.video-wrapper {
+    position: relative;
+
+    width: min(1100px, 100%);
+
+    /*
+       Большое видео,
+       но НЕ на весь экран
+    */
+    max-height: 78vh;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    background: #050505;
+
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.65),
+        0 0 0 1px rgba(255,255,255,.08);
+
+    aspect-ratio: 16 / 9;
+}
+
+.video-wrapper video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #000;
+
+    border: none;
+    outline: none;
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+.confetti {
+    position: fixed;
+
+    top: -20px;
+
+    width: 8px;
+    height: 14px;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+
+    from {
+        transform:
+            translateY(-30px)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 16px;
+    }
+
+    .card {
+        border-radius: 25px;
+
+        padding:
+            34px 19px;
+    }
+
+    .heart {
+        width: 65px;
+        height: 65px;
+
+        font-size: 32px;
+
+        border-radius: 20px;
+
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        letter-spacing: -1px;
+    }
+
+    .question {
+        margin-top: 28px;
+    }
+
+    .answers {
+        gap: 10px;
+    }
+
+    .answer {
+        min-height: 58px;
+
+        font-size: 16px;
+
+        border-radius: 15px;
+    }
+
+    .video-section {
+        padding: 20px 12px;
+    }
+
+    .video-wrapper {
+        width: 100%;
+
+        border-radius: 22px;
+
+        /*
+          На телефоне видео всё равно
+          остаётся крупным, но с отступами
+        */
+        max-height: 72vh;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .answers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .answer {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-    <!-- Background -->
-    <div class="background">
-        <div class="glow one"></div>
-        <div class="glow two"></div>
-    </div>
+<!-- Background -->
+<div class="background">
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+</div>
 
 
-    <!-- Main page -->
-    <main class="page" id="mainPage">
+<!-- =========================================
+     FIRST SCREEN
+========================================= -->
 
-        <section class="card">
+<main class="page" id="mainPage">
 
-            <div class="heart">
-                ❤️
-            </div>
+    <section class="card">
 
-            <h1>
-                С Днём учителя!
-            </h1>
+        <div class="heart">
+            ❤️
+        </div>
 
-            <p class="subtitle">
-                Дорогой Сянан Меллим,<br>
-                поздравляем Вас с этим прекрасным днём!
+
+        <h1>
+            С Днём учителя!
+        </h1>
+
+
+        <div class="subtitle">
+            Дорогой Сянан Меллим,<br>
+            поздравляем Вас с этим прекрасным днём! 🥳
+        </div>
+
+
+        <div class="names">
+            От Кямиля и Рауля ❤️
+        </div>
+
+
+        <!-- QUESTION -->
+
+        <div class="question">
+
+            <h2>
+                🎁 Дадите нам 50 кристаллов?
+            </h2>
+
+            <p>
+                Мы очень старались... 🥺
             </p>
 
-            <div class="names">
-                От Кямила и Рауля ❤️
+
+            <div class="answers">
+
+                <button
+                    class="answer yes"
+                    id="yesButton"
+                >
+                    ДА ❤️
+                </button>
+
+
+                <button
+                    class="answer no"
+                    id="noButton"
+                >
+                    НЕТ 😭
+                </button>
+
             </div>
 
-            <div class="question">
 
-                <div class="question-title">
-                    А дадите нам 50 кристаллов? 🥺
+            <!-- Appears after answer -->
+
+            <div
+                class="after-answer"
+                id="afterAnswer"
+            >
+
+                <div class="after-title">
+                    😏 Мы так и знали...
                 </div>
 
-                <div class="question-text">
-                    Ну пожалуйста... мы очень старались! 😭
-                </div>
 
-                <button class="start-button" id="startButton">
+                <button
+                    class="start-button"
+                    id="startButton"
+                >
+
                     <span class="button-content">
-                        ДАЮ 50 КРИСТАЛЛОВ ❤️
+                        🔴 НАЖМИТЕ НА КНОПКУ
                     </span>
 
                     <span class="button-shine"></span>
+
                 </button>
+
 
                 <div class="hint">
                     ↓ нажмите на кнопку ↓
@@ -506,13 +775,23 @@
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
+
+</main>
 
 
-    <!-- Video screen -->
-    <div id="videoScreen">
+<!-- =========================================
+     VIDEO
+========================================= -->
+
+<section
+    class="video-section"
+    id="videoSection"
+>
+
+    <div class="video-wrapper">
 
         <video
             id="mainVideo"
@@ -523,167 +802,284 @@
 
     </div>
 
-
-    <!-- Audio -->
-    <audio
-        id="voice"
-        src="ozvuchka.mp3"
-        preload="auto">
-    </audio>
+</section>
 
 
-    <script>
+<!-- AUDIO -->
 
-        const button = document.getElementById("startButton");
-        const voice = document.getElementById("voice");
-        const mainPage = document.getElementById("mainPage");
-        const videoScreen = document.getElementById("videoScreen");
-        const video = document.getElementById("mainVideo");
-
-
-        let started = false;
+<audio
+    id="voice"
+    src="ozvuchka.mp3"
+    preload="auto"
+></audio>
 
 
-        // ============================
-        // BUTTON
-        // ============================
+<script>
 
-        button.addEventListener("click", async () => {
+const yesButton =
+    document.getElementById("yesButton");
 
-            if (started) return;
+const noButton =
+    document.getElementById("noButton");
 
-            started = true;
+const afterAnswer =
+    document.getElementById("afterAnswer");
 
-            button.disabled = true;
+const startButton =
+    document.getElementById("startButton");
 
-            button.querySelector(".button-content").textContent =
-                "❤️ Сейчас будет...";
+const voice =
+    document.getElementById("voice");
 
+const mainPage =
+    document.getElementById("mainPage");
 
-            // Конфетти
-            createConfetti();
+const videoSection =
+    document.getElementById("videoSection");
 
-
-            try {
-
-                // Запускаем озвучку
-                voice.currentTime = 0;
-
-                await voice.play();
-
-            } catch (error) {
-
-                console.log("Audio playback error:", error);
-
-                // Если браузер не смог запустить аудио,
-                // всё равно переходим к видео.
-                showVideo();
-
-            }
-
-        });
+const video =
+    document.getElementById("mainVideo");
 
 
-        // ============================
-        // AUDIO FINISHED
-        // ============================
-
-        voice.addEventListener("ended", () => {
-
-            showVideo();
-
-        });
+let answered = false;
+let started = false;
 
 
-        // ============================
-        // SHOW VIDEO
-        // ============================
+/* =========================================
+   ANSWER
+========================================= */
 
-        async function showVideo() {
+function answerQuestion(answer) {
 
-            // Скрываем первую страницу
-            mainPage.style.display = "none";
+    if (answered) return;
 
-            // Показываем видео
-            videoScreen.classList.add("active");
+    answered = true;
 
-            // Перематываем в начало
-            video.currentTime = 0;
 
-            try {
+    // Показываем следующий этап
+    afterAnswer.classList.add("show");
 
-                // Пытаемся запустить видео со звуком
-                await video.play();
 
-            } catch (error) {
+    // Убираем варианты ответа
+    yesButton.style.display = "none";
+    noButton.style.display = "none";
 
-                console.log(
-                    "Autoplay with sound was blocked. Trying muted playback."
-                );
 
-                // Некоторые браузеры могут запретить
-                // автоматическое видео со звуком.
-                video.muted = true;
+    // Меняем текст в зависимости от ответа
+    const title =
+        afterAnswer.querySelector(".after-title");
 
-                try {
-                    await video.play();
-                } catch (e) {
-                    console.log("Video autoplay blocked:", e);
-                }
 
-            }
+    if (answer === "yes") {
+
+        title.textContent =
+            "❤️ Спасибо! Мы знали, что Вы добрый!";
+
+    } else {
+
+        title.textContent =
+            "🥺 Ну пожалуйста... хотя бы нажмите сюда!";
+
+    }
+
+}
+
+
+/* =========================================
+   YES / NO
+========================================= */
+
+yesButton.addEventListener("click", () => {
+
+    answerQuestion("yes");
+
+});
+
+
+noButton.addEventListener("click", () => {
+
+    answerQuestion("no");
+
+});
+
+
+/* =========================================
+   RED BUTTON
+========================================= */
+
+startButton.addEventListener("click", async () => {
+
+    if (started) return;
+
+    started = true;
+
+    startButton.disabled = true;
+
+    startButton.querySelector(
+        ".button-content"
+    ).textContent = "❤️ Сейчас...";
+
+
+    createConfetti();
+
+
+    try {
+
+        voice.currentTime = 0;
+
+        await voice.play();
+
+    } catch (error) {
+
+        console.log(
+            "Не удалось запустить MP3:",
+            error
+        );
+
+        showVideo();
+
+    }
+
+});
+
+
+/* =========================================
+   AUDIO ENDED
+========================================= */
+
+voice.addEventListener("ended", () => {
+
+    showVideo();
+
+});
+
+
+/* =========================================
+   SHOW VIDEO
+========================================= */
+
+async function showVideo() {
+
+    /*
+       Убираем первый экран
+    */
+
+    mainPage.style.display = "none";
+
+
+    /*
+       Показываем видео
+    */
+
+    videoSection.classList.add("show");
+
+
+    /*
+       Начинаем с начала
+    */
+
+    video.currentTime = 0;
+
+
+    try {
+
+        await video.play();
+
+    } catch (error) {
+
+        console.log(
+            "Autoplay заблокирован браузером:",
+            error
+        );
+
+        /*
+           Обычно после нажатия пользователя
+           autoplay должен работать.
+        */
+
+        video.muted = true;
+
+        try {
+
+            await video.play();
+
+        } catch (e) {
+
+            console.log(
+                "Видео не удалось автоматически запустить:",
+                e
+            );
 
         }
 
+    }
 
-        // ============================
-        // CONFETTI
-        // ============================
+}
 
-        function createConfetti() {
 
-            const amount = 80;
+/* =========================================
+   CONFETTI
+========================================= */
 
-            for (let i = 0; i < amount; i++) {
+function createConfetti() {
 
-                const piece = document.createElement("div");
+    const colors = [
+        "#ff1744",
+        "#ff4569",
+        "#ffffff",
+        "#ffd166",
+        "#7c3aed"
+    ];
 
-                piece.className = "confetti";
 
-                piece.style.left =
-                    Math.random() * 100 + "vw";
+    for (let i = 0; i < 90; i++) {
 
-                piece.style.animationDuration =
-                    (2 + Math.random() * 3) + "s";
+        const piece =
+            document.createElement("div");
 
-                piece.style.animationDelay =
-                    Math.random() * .7 + "s";
 
-                piece.style.transform =
-                    `rotate(${Math.random() * 360}deg)`;
+        piece.className =
+            "confetti";
 
-                const colors = [
-                    "#ff1744",
-                    "#ff4569",
-                    "#ffffff",
-                    "#ffd166",
-                    "#7c3aed"
-                ];
 
-                piece.style.background =
-                    colors[Math.floor(Math.random() * colors.length)];
+        piece.style.left =
+            Math.random() * 100 + "vw";
 
-                document.body.appendChild(piece);
 
-                setTimeout(() => {
-                    piece.remove();
-                }, 5500);
+        piece.style.background =
+            colors[
+                Math.floor(
+                    Math.random() * colors.length
+                )
+            ];
 
-            }
 
-        }
+        piece.style.animationDuration =
+            (2 + Math.random() * 3) + "s";
 
-    </script>
+
+        piece.style.animationDelay =
+            Math.random() * .6 + "s";
+
+
+        piece.style.transform =
+            `rotate(${Math.random() * 360}deg)`;
+
+
+        document.body.appendChild(piece);
+
+
+        setTimeout(() => {
+
+            piece.remove();
+
+        }, 5500);
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
